@@ -7,13 +7,6 @@ plugins {
     `maven-publish`
 }
 
-repositories {
-    mavenLocal()
-    maven("https://maven.scijava.org/content/groups/public")
-    maven("https://maven.scijava.org/content/groups/snapshots")
-    maven("https://repo.maven.apache.org/maven2")
-}
-
 dependencies {
     implementation("org.scijava:scijava-common:2.83.3")
     implementation("net.imglib2:imglib2:5.10.0")
@@ -23,26 +16,5 @@ dependencies {
     testImplementation("io.scif:scifio:0.41.0")
 }
 
-group = "net.imagej"
 version = "0.8.2-SNAPSHOT"
 description = "ImageJ Mesh"
-//sourceCompatibility = "1.8"
-//
-//configurations.all {
-//}
-//
-//java {
-//    withSourcesJar()
-//}
-//
-//publishing {
-//    publications {
-//        maven(MavenPublication) {
-//            from(components.java)
-//        }
-//    }
-//}
-//
-//tasks.withType(JavaCompile) {
-//    options.encoding = "UTF-8"
-//}

@@ -7,12 +7,6 @@ plugins {
     `maven-publish`
 }
 
-repositories {
-    mavenLocal()
-    maven("https://maven.scijava.org/content/groups/public")
-    maven("https://repo.maven.apache.org/maven2")
-}
-
 dependencies {
     implementation(project(":common"))
     implementation(project(":ops"))
@@ -31,23 +25,5 @@ dependencies {
     implementation("net.imglib2:imglib2-algorithm:0.11.2")
 }
 
-group = "net.imagej"
 version = "0.7.2-SNAPSHOT"
 description = "ImageJ Notebook"
-//sourceCompatibility = "1.8"
-
-//configurations.all {}
-
-//java.withSourcesJar()
-//
-//publishing {
-//    publications {
-//        maven(MavenPublication) {
-//            from(components.java)
-//        }
-//    }
-//}
-//
-//tasks.withType(JavaCompile) {
-//    options.encoding = "UTF-8"
-//}

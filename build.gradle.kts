@@ -12,14 +12,23 @@ version = "2.2.1-SNAPSHOT"
 description = "ImageJ"
 //sourceCompatibility = "1.8"
 
-repositories {
-    mavenLocal()
-    maven("https://maven.scijava.org/content/groups/public")
-    maven("https://repo.maven.apache.org/maven2")
+
+allprojects {
+
+    group = "net.imagej"
+
+    repositories {
+        mavenLocal()
+        maven("https://maven.scijava.org/content/groups/public")
+        mavenCentral()
+    }
+
+//    java.withSourcesJar()
+
 }
 
 dependencies {
-    listOf(":common", ":launcher", ":notebook", ":ops", ":updater").forEach {
+    listOf(":common", ":legacy", ":launcher", ":notebook", ":ops", ":updater").forEach {
         implementation(project(it))
     }
     implementation("io.scif:scifio:0.41.1")
@@ -36,12 +45,17 @@ dependencies {
     runtimeOnly("org.scijava:scijava-plugins-text-plain:0.1.3")
     runtimeOnly("org.scijava:script-editor:0.5.6")
     testImplementation("junit:junit:4.13")
+
+    // [Gradle]
+    testImplementation(project(":deprecated"))
+    testImplementation(project(":ui-awt"))
+    testImplementation(project(":ui-swing"))
 }
 
 
 //configurations.all { }
 
-java.withSourcesJar()
+//java.withSourcesJar()
 
 publishing.publications.register("mavenJava", MavenPublication::class) {
     from(components["java"])

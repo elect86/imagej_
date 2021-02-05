@@ -7,13 +7,6 @@ plugins {
     `maven-publish`
 }
 
-repositories {
-    mavenLocal()
-    maven("https://maven.scijava.org/content/groups/public")
-    maven("https://maven.scijava.org/content/groups/snapshots")
-    maven("https://repo.maven.apache.org/maven2")
-}
-
 dependencies {
     implementation("org.scijava:scijava-common:2.77.0")
     implementation(project(":mesh"))
@@ -24,26 +17,5 @@ dependencies {
     testImplementation("junit:junit:4.12")
 }
 
-group = "net.imagej"
 version = "0.1.3-SNAPSHOT"
 description = "ImageJ Mesh I/O plugins"
-//sourceCompatibility = "1.8"
-
-//configurations.all {
-//}
-//
-//java {
-//    withSourcesJar()
-//}
-//
-//publishing {
-//    publications {
-//        maven(MavenPublication) {
-//            from(components.java)
-//        }
-//    }
-//}
-//
-//tasks.withType(JavaCompile) {
-//    options.encoding = "UTF-8"
-//}

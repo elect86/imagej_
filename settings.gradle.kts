@@ -8,6 +8,7 @@ include(
     "common",
     "deprecated",
     "launcher",
+    "legacy",
     "mesh",
     "mesh-io",
     "notebook",
