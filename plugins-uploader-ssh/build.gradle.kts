@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+    // [Gradle]
+    implementation(project(":common"))
     implementation(project(":updater"))
     implementation("org.scijava:scijava-common:2.77.0")
     implementation("com.jcraft:jsch:0.1.55")

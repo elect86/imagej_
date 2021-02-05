@@ -16,7 +16,7 @@ repositories {
 dependencies {
     implementation(project(":common"))
     implementation(project(":ops"))
-//    implementation("net.imagej:imagej-deprecated:0.1.2")
+    implementation(project(":deprecated"))
     implementation("net.imglib2:imglib2:5.6.3")
     implementation("net.imglib2:imglib2-algorithm:0.11.1")
     implementation("org.scijava:scijava-common:2.77.0")

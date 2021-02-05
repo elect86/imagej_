@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+    // [Gradle]
+    implementation(project(":common"))
     implementation(project(":updater"))
     implementation("org.scijava:scijava-common:2.77.0")
     implementation("org.apache.jackrabbit:jackrabbit-webdav:2.19.1")
