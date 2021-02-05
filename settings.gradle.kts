@@ -6,6 +6,7 @@ rootProject.name = "imagej"
 
 include(
     "common",
+    "deprecated",
     "launcher",
     "mesh",
     "mesh-io",

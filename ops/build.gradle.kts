@@ -36,6 +36,9 @@ dependencies {
 //    testImplementation("org.scijava:scripting-jython:1.0.0")
     testImplementation("net.imagej:ij:1.53c")
     testImplementation("net.imglib2:imglib2-ij:2.0.0-beta-46")
+
+    // [Gradle] added
+    implementation("org.scijava:scijava-table:0.6.1")
 }
 
 group = "net.imagej"

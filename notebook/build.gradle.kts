@@ -26,6 +26,9 @@ dependencies {
     testImplementation(project(":ui-swing"))
     compileOnly("com.github.jupyter:jvm-repr:0.2.1")
     compileOnly("com.github.twosigma.beakerx:beaker-kernel-base:1.0.0")
+
+    // [Gradle]
+    implementation("net.imglib2:imglib2-algorithm:0.11.2")
 }
 
 group = "net.imagej"

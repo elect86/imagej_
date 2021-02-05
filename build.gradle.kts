@@ -24,8 +24,8 @@ dependencies {
     }
     implementation("io.scif:scifio:0.41.1")
     implementation("org.scijava:scijava-common:2.85.0")
-    listOf(":mesh-io", ":plugins-batch", ":plugins-commands", ":plugins-tools", ":plugins-uploader-ssh",
-        ":plugins-uploader-webdav", ":scripting", ":ui-swing").forEach {
+    listOf(":mesh-io", ":plugins-batch", ":deprecated", ":plugins-commands", ":plugins-tools",
+        ":plugins-uploader-ssh", ":plugins-uploader-webdav", ":scripting", ":ui-swing").forEach {
         runtimeOnly(project(it))
     }
     runtimeOnly("org.scijava:scijava-io-http:0.2.1")
